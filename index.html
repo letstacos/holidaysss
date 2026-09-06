@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Holiday Lists</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-roll"></div>
+  <div class="marquee"><span id="marqueeText">WELCOME TO THE HOLIDAY LISTS &nbsp;&#9733;&nbsp; PICK A LIST &nbsp;&#9733;&nbsp; ADD TO THE WISH LIST AT THE BOTTOM &nbsp;&#9733;&nbsp; IT SAVES ITSELF &nbsp;&#9733;</span></div>
+
+  <header class="titlebar">
+    <div class="titlebar-text">Holiday Lists</div>
+    <div class="titlebar-dots">&#9679; &#9679; &#9679;</div>
+    <img class="watermark" src="3dgifmaker73671.gif" alt="watermark" />
+  </header>
+
+  <main id="view">
+    <section id="menu" class="view">
+      <h1 class="page-title">What do you want to get me?</h1>
+      <p class="subtitle">Click a list to see the full thing.</p>
+      <div class="menu-grid" id="menuGrid"></div>
+    </section>
+
+    <section id="docview" class="view hidden">
+      <button id="backBtn" class="btn back">&#9664; Back to menu</button>
+      <h1 class="page-title" id="docTitle"></h1>
+      <div class="docbox" id="docContent"></div>
+    </section>
+  </main>
+
+  <div class="bottombar" id="bottomBar">
+    <button class="collapse-btn" id="collapseBtn">Wishlist &#9660;</button>
+    <div class="bottombar-body" id="bottomBody">
+      <canvas id="viz" class="viz"></canvas>
+      <footer class="wishbar">
+      <div class="wishbar-head">
+        <span class="wishbar-title">&#9733; My Wish List</span>
+        <span class="wishbar-count" id="wishCount">0</span>
+      </div>
+      <div class="player-controls">
+        <button class="pbtn" id="prevBtn">&#9664;&#9664; Previous</button>
+        <button class="pbtn" id="playPauseBtn">&#9632; Pause</button>
+        <button class="pbtn" id="nextBtn">Next &#9654;&#9654;</button>
+      </div>
+      <div class="wishbar-form">
+        <input id="wishInput" type="text" placeholder="Type something you want..." autocomplete="off" />
+        <button id="wishAdd" class="btn">Add</button>
+      </div>
+      </footer>
+    </div>
+  </div>
+
+  <div class="winlayer">
+    <div class="window" id="wishWin">
+      <div class="win-titlebar">
+        <span class="win-title">&#9733; Wish List</span>
+        <div class="win-controls">
+          <button class="win-btn" id="wishMin" title="Minimize">&#95;</button>
+          <button class="win-btn" id="wishClose" title="Close">&#10005;</button>
+        </div>
+      </div>
+      <div class="win-body">
+        <ul class="wishbar-list" id="wishList"></ul>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
